@@ -1,5 +1,13 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@ui": ["components/ui"],
+      "@ui/*": ["components/ui/*"],
+      "@_types/*": ["types/*"],
+      "@providers": ["components/providers"],
+      "@providers/*": ["components/providers/*"]
+    },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
