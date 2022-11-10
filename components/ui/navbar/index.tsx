@@ -3,14 +3,16 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import  page_logo  from '../../../public/images/page_logo.png';
 import Link from 'next/link';
+import {useAccount} from "@hooks";
 
 function classNames(...classes: string []) {
     return classes.filter(Boolean).join(' ')
 }
 
-export default function Example() {
+export default function Navbar() {
 
-
+    const {  data } = useAccount("random");
+    console.log(data)
     const [ navigation, setNavigation] = useState([
         { name: 'Marketplace', href: '/', current: true },
         { name: 'Create', href: '/nft/create', current: false },

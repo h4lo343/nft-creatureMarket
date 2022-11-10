@@ -8,18 +8,7 @@ import {useWeb3} from "@providers/web3";
 
 
 const Home: NextPage = () => {
-    const { ethereum, provider } = useWeb3();
-
-    const getAccounts = async () => {
-       const accounts = await provider!.listAccounts()
-        console.log(accounts[0])
-
-    }
-
-    if (provider) {
-        getAccounts()
-    }
-
+    const { contract, provider } = useWeb3();
 
     return (
         <BaseLayout>

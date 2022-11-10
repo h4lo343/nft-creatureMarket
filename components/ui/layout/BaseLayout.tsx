@@ -1,7 +1,7 @@
 import { ReactNode, FC } from 'react'
 import {Navbar} from "../index";
 
-<Navbar/>
+
 
 interface PropsType {
     children: ReactNode

@@ -29,6 +29,7 @@ export const createDefaultState = () => {
 const NETWORK_ID = process.env.NEXT_PUBLIC_NETWORK_ID;
 
 export const loadContract = async (name: string, provider: providers.Web3Provider) => {
+
     if (!NETWORK_ID) {
         return Promise.reject("Network ID is not defined")
     }
