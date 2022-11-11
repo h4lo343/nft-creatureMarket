@@ -1,16 +1,23 @@
 
 
 import useSWR from "swr"
+import {CryptoHookFactory} from "@_types/hooks";
+
+type AccountHookFactory = CryptoHookFactory<string>
+
+export type UseAccountHook = ReturnType<AccountHookFactory>
 
 // deps -> provider, ethereum, contract (Web3State)
-export const hookFactory = (deps: any) => (params: any) => {
-    const swrRes = useSWR("web3/useAccount", () => {
-        console.log(deps)
-        console.log(params)
-        return "Hello"
+export const hookFactory : AccountHookFactory = ({provider}) => (params) => {
+    const swrRes = useSWR(provider? "web3/useAccount" : null, async () => {
+        const accounts = await provider!.listAccounts()
+        const account = accounts[0]
+        return account;
     })
+
+
 
     return swrRes;
 }
 
-export const useAccount = hookFactory({ethereum: null, provider: null})
+
