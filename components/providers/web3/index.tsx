@@ -1,7 +1,6 @@
 import { createContext, FC, ReactNode, useContext, useEffect, useState } from "react";
 import {createDefaultState, createWeb3State, loadContract, Web3State} from "@providers/web3/utils";
 import { ethers } from "ethers"
-import {setupHooks} from "@hooks/web3/setupHooks";
 
 
 const Web3Context = createContext<Web3State>(createDefaultState());
