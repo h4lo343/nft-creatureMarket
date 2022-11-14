@@ -17,6 +17,7 @@ export default function Navbar() {
     const {  account } = useAccount()
 
 
+
     const [ navigation, setNavigation] = useState([
         { name: 'Marketplace', href: '/', current: true },
         { name: 'Create', href: '/nft/create', current: false },
