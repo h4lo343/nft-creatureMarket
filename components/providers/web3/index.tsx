@@ -66,6 +66,7 @@ const Web3Provider : FC<PropsType> = ({children}) => {
     )
 }
 // update 1
+// update 2
 
 export function useWeb3() {
     return useContext(Web3Context);
