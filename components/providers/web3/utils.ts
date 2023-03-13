@@ -57,7 +57,11 @@ export const loadContract = async (name: string, provider: providers.Web3Provide
              Artifact.abi,
              provider
          )
-
+        // update CHANGELOG.md
+        // develop feature b 1
+        // develop feature b 2
+        // develop feature b 3
+        // finalize CHANGELOG
         return contract
     } else {
         return Promise.reject(`Contract: [${name}] can not be loaded`)
